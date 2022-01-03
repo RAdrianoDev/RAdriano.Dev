@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #6f91be;
+    padding: 20px;
+}
+
+.header__profile-picture {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.6);
+    width: 160px;
+    height: auto;
+    display:block;
+    border-radius: 25%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+}
+
+.header__title, .header__subtitle {
+    color: #fff;
+    text-align: center;
+}
+
+.header__social-media {
+    text-align: center;
+}
+
+.header__social-media img {
+    width: 30px;
+    margin-bottom: 2em;
+    margin-right: 1em;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
