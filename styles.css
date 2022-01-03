@@ -21,10 +21,12 @@ header {
 .header__title, .header__subtitle {
     color: #fff;
     text-align: center;
+    font-size: 24px;
 }
 
 .header__social-media {
     text-align: center;
+    margin-top: 20px;
 }
 
 .header__social-media img {
@@ -33,8 +35,46 @@ header {
     margin-right: 1em;
 }
 
-li {
+.header__social-media li {
     list-style: none;
     display: inline-block;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about-me {
+    background-color: rgb(203, 217, 230);
+    padding: 20px;
+}
+
+.about-me__soft-skills, .about-me__hard-skills {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.about-me__soft-skills li:first-child, .about-me__hard-skills li:first-child {
+    color: rgb(153, 24, 24);
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.other-jobs {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.contact {
+    width: 100%;
+    height: 200px;
+    background-color: rgb(196, 196, 196);
+}
+
+.footer {
+    background-color: #6f91be;
+    width: 100%;
+    height: 100px;
+}
