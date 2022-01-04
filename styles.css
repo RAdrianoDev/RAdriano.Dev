@@ -1,80 +1,108 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
-    background-color: #6f91be;
-    padding: 20px;
+  background-color: #6f91be;
+  padding: 20px;
 }
 
 .header__profile-picture {
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.6);
-    width: 160px;
-    height: auto;
-    display:block;
-    border-radius: 25%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 20px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.6);
+  width: 160px;
+  height: auto;
+  display: block;
+  border-radius: 25%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
 }
 
-.header__title, .header__subtitle {
-    color: #fff;
-    text-align: center;
-    font-size: 24px;
+.header__title,
+.header__subtitle {
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
 }
 
 .header__social-media {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .header__social-media img {
-    width: 30px;
-    margin-bottom: 2em;
-    margin-right: 1em;
+  width: 30px;
+  margin-bottom: 2em;
+  margin-right: 1em;
 }
 
 .header__social-media li {
-    list-style: none;
-    display: inline-block;
+  list-style: none;
+  display: inline-block;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .about-me {
-    background-color: rgb(203, 217, 230);
-    padding: 20px;
+  background-color: rgb(203, 217, 230);
+  padding: 20px;
 }
 
-.about-me__soft-skills, .about-me__hard-skills {
-    display: inline-block;
-    vertical-align: top;
+.about-me__soft-skills,
+.about-me__hard-skills {
+  display: inline-block;
+  vertical-align: top;
 }
 
-.about-me__soft-skills li:first-child, .about-me__hard-skills li:first-child {
-    color: rgb(153, 24, 24);
-    font-size: 20px;
-    padding: 10px;
-    font-weight: bold;
+.about-me__soft-skills li:first-child,
+.about-me__hard-skills li:first-child {
+  color: rgb(153, 24, 24);
+  font-size: 20px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.other-jobs img {
+  width: 100%;
+  height: 23vh;
+  object-fit: cover;
 }
 
 .other-jobs {
-    background-color: #fff;
-    padding: 10px;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.other-jobs__card-barbershop {
+  width: 50%;
+  height: 320px;
+  background-color: rgb(158, 158, 158);
+  overflow: hidden;
+  border-radius: 5%;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.6);
+}
+
+.other-jobs__card-barbershop a {
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.other-jobs__card-barbershop p {
+  padding: 3px;
 }
 
 .contact {
-    width: 100%;
-    height: 200px;
-    background-color: rgb(196, 196, 196);
+  width: 100%;
+  height: 200px;
+  background-color: rgb(196, 196, 196);
 }
 
 .footer {
-    background-color: #6f91be;
-    width: 100%;
-    height: 100px;
+  background-color: #6f91be;
+  width: 100%;
+  height: 100px;
 }
