@@ -55,10 +55,14 @@ header {
   color: #e50914;
   text-decoration: none;
   background-color: #ad6464;
-  font-size: 150%;
+  font-size: 125%;
   font-weight: 100;
   height: 120%;
   padding: 5px 5px 5px 5px;
+}
+
+.nav-bar-home:hover, .nav-bar-contact:hover {
+  background-color: #f95e5e;
 }
 
 .about-me {
