@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+.link{
+  color: red;
+}
 body {
   font-family: 'Times New Roman', Times, serif;
   width: auto;
@@ -7,42 +10,44 @@ body {
 }
 
 header {
-  background-color: #b1afaf;
-  padding: 10px 5px 10px 5px;
+  background-color: #221b1b;
+  padding: 3% 0% 0% 0%;
 }
 
 .header__profile-picture {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 10px 2px 30px 10px rgba(255, 0, 0, 0.6);
   width: 160px;
   height: auto;
   display: block;
   border-radius: 30%;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 20px;
+  margin: 2% auto 5% auto;
 }
 
 .header__title,
 .header__subtitle {
-  color: #6d0000;
+  color: #ffffff;
   text-align: center;
-  /* font-size: 30px; */
+  margin: 2%;
 }
 
 .header__social-media {
   text-align: center;
-  margin-top: 20px;
+  background-color: rgb(0, 0, 0);
 }
 
 .header__social-media img {
   width: 30px;
-  margin-bottom: 2em;
-  margin-right: 1em;
+  margin: 3%;
+  padding: 1%;
+  margin-right: 8%;
 }
 
 .header__social-media li {
   list-style: none;
   display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 1%;
 }
 
 .grid-container {
@@ -52,13 +57,13 @@ header {
 
 .nav-bar-home, .nav-bar-contact {
   text-align: center;
-  color: #e50914;
+  color: #ffffff;
   text-decoration: none;
-  background-color: #ad6464;
+  background-color: #000000;
   font-size: 125%;
   font-weight: 100;
   height: 120%;
-  padding: 5px 5px 5px 5px;
+  padding: 1% 1% 1% 1%;
 }
 
 .nav-bar-home:hover, .nav-bar-contact:hover {
@@ -66,8 +71,10 @@ header {
 }
 
 .about-me {
-  background-color: rgb(203, 217, 230);
+  background-color: #221b1b;
+  color: #ffffff;
   padding: 20px;
+  border-right: solid 2px #ffffff;
 }
 
 .about-me__soft-skills,
@@ -81,8 +88,8 @@ header {
 
 .about-me__soft-skills li:first-child,
 .about-me__hard-skills li:first-child {
-  color: rgb(153, 24, 24);
-  /* font-size: 20px; */
+  color: #ffffff;
+  text-decoration: underline;
   padding: 10px;
   font-weight: bold;
 }
@@ -94,23 +101,31 @@ header {
 }
 
 .other-jobs {
-  background-color: rgb(230, 206, 203);
+  background-color: #221b1b;
+  color: #ffffff;
   padding: 10px;
+  text-align: center;
+  padding: 5%;
+  
+}
+
+.other-jobs h3 {
+  padding: 0% 1% 5% 0%;
 }
 
 .other-jobs__card-barbershop {
   width: 50%;
   height: 300px;
-  background-color: rgb(186, 175, 175);
+  background-color: rgb(105, 105, 105);
   overflow: hidden;
   border-radius: 5%;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 1px 1px 20px 5px rgba(221, 250, 29, 0.6);
 }
 
 .other-jobs__card-barbershop a {
   text-align: center;
   text-decoration: none;
-  color: #000000;
+  color: #ffffff;
 }
 
 .other-jobs__card-barbershop p {
@@ -121,14 +136,16 @@ header {
 .contact {
   width: 100%;
   height: fit-content;
-  background-color: rgb(196, 196, 196);
+  color: #ffffff;
+  background-color: #000000;
   padding: 20px 10px 20px 10px;
-  border-top: #5b5b5b solid 1px;
-  border-bottom: #5b5b5b solid 1px;
+  border-top: #ffffff solid 1px;
+  border-bottom: #ffffff solid 1px;
 }
 
 .footer {
-  background-color: #54749e;
+  background-color: #221b1b;
+  color: #ffffff;
   text-align: center;
   width: 100%;
   height: fit-content;
