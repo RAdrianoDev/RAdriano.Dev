@@ -8,7 +8,7 @@ body {
 
 header {
   background-color: #b1afaf;
-  padding: 20px;
+  padding: 10px 5px 10px 5px;
 }
 
 .header__profile-picture {
@@ -50,7 +50,7 @@ header {
   grid-template-columns: 1fr 1fr;
 }
 
-#nav-bar {
+.nav-bar-home, .nav-bar-contact {
   text-align: center;
   color: #e50914;
   text-decoration: none;
@@ -119,8 +119,8 @@ header {
   height: fit-content;
   background-color: rgb(196, 196, 196);
   padding: 20px 10px 20px 10px;
-  border-top: #6d0000 solid 1px;
-  border-bottom: #6d0000 solid 1px;
+  border-top: #5b5b5b solid 1px;
+  border-bottom: #5b5b5b solid 1px;
 }
 
 .footer {
