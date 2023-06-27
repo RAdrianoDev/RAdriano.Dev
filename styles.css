@@ -1,53 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-.link{
-  color: red;
+:root {
+  --color-main-background: hsl(0, 11%, 12%);
+  --color-profille-picture-shadow: rgba(255, 0, 0, 0.6);
+  --color-nav-bar-backgound: #000000;
+  --color-nav-bar-hover: #e8e19c;
+  --color-fonts: #ffffff;
+
+  --color-borders: #ffffff;
+  --color-background-cards: rgb(113, 108, 108);
+  --color-cards-shadow:  rgba(221, 250, 29, 0.6);
+
 }
+
 body {
   font-family: 'Times New Roman', Times, serif;
-  width: auto;
-  color: #000000;
+  width: 100%;
+  color: var(--color-fonts);
+  background-color: var(--color-main-background);
 }
 
 header {
-  background-color: #221b1b;
-  padding: 3% 0% 0% 0%;
+  background-color: var(--color-main-background);
+  padding-top: 1%;
+  padding-bottom: 0%;
 }
 
 .header__profile-picture {
-  box-shadow: 10px 2px 30px 10px rgba(255, 0, 0, 0.6);
+  box-shadow: 10px 2px 30px 10px var(--color-profille-picture-shadow);
   width: 160px;
   height: auto;
   display: block;
   border-radius: 30%;
-  margin: 2% auto 5% auto;
+  margin: 1% auto 3% auto;
 }
 
 .header__title,
 .header__subtitle {
-  color: #ffffff;
+  color: var(--color-fonts);
   text-align: center;
-  margin: 2%;
+  margin: 1% 1% 1% 1%;
 }
 
 .header__social-media {
   text-align: center;
-  background-color: rgb(0, 0, 0);
+  background-color: var(--color-nav-bar-backgound);
+}
+
+.header__social-media {
+  margin: 0% 0% 0.2% 0%;
+  padding: 0%;
 }
 
 .header__social-media img {
   width: 30px;
   margin: 3%;
-  padding: 1%;
-  margin-right: 8%;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 .header__social-media li {
   list-style: none;
   display: inline-block;
   text-decoration: none;
-  color: #ffffff;
-  padding: 1%;
+  color: var(--color-fonts);
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 .grid-container {
@@ -57,24 +75,30 @@ header {
 
 .nav-bar-home, .nav-bar-contact {
   text-align: center;
-  color: #ffffff;
+  color: var(--color-fonts);
   text-decoration: none;
-  background-color: #000000;
+  background-color: var(--color-nav-bar-backgound);
   font-size: 125%;
   font-weight: 100;
   height: 120%;
-  padding: 1% 1% 1% 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 .nav-bar-home:hover, .nav-bar-contact:hover {
-  background-color: #f95e5e;
+  background-color: var(--color-nav-bar-hover);
 }
 
 .about-me {
-  background-color: #221b1b;
-  color: #ffffff;
-  padding: 20px;
-  border-right: solid 2px #ffffff;
+  background-color: var(--color-main-background);
+  color: var(--color-fonts);
+  padding: 2%;
+  border-right: solid 2px var(--color-borders);
+}
+
+.about-me h3, .other-jobs h3 {
+  padding: 1% 1% 1% 1%;
+  text-align: center;
 }
 
 .about-me__soft-skills,
@@ -88,7 +112,7 @@ header {
 
 .about-me__soft-skills li:first-child,
 .about-me__hard-skills li:first-child {
-  color: #ffffff;
+  color: var(--color-fonts);
   text-decoration: underline;
   padding: 10px;
   font-weight: bold;
@@ -101,31 +125,27 @@ header {
 }
 
 .other-jobs {
-  background-color: #221b1b;
-  color: #ffffff;
+  background-color: var(--color-main-background);
+  color: var(--color-fonts);
   padding: 10px;
   text-align: center;
-  padding: 5%;
+  padding: 2%;
   
-}
-
-.other-jobs h3 {
-  padding: 0% 1% 5% 0%;
 }
 
 .other-jobs__card-barbershop {
   width: 50%;
   height: 300px;
-  background-color: rgb(105, 105, 105);
+  background-color: var(--color-background-cards);
   overflow: hidden;
   border-radius: 5%;
-  box-shadow: 1px 1px 20px 5px rgba(221, 250, 29, 0.6);
+  box-shadow: 1px 1px 20px 5px var(--color-cards-shadow);
 }
 
 .other-jobs__card-barbershop a {
   text-align: center;
   text-decoration: none;
-  color: #ffffff;
+  color: var(--color-fonts);
 }
 
 .other-jobs__card-barbershop p {
@@ -134,22 +154,21 @@ header {
 }
 
 .contact {
-  width: 100%;
-  height: fit-content;
-  color: #ffffff;
-  background-color: #000000;
-  padding: 20px 10px 20px 10px;
-  border-top: #ffffff solid 1px;
-  border-bottom: #ffffff solid 1px;
+  color: var(--color-fonts);
+  background-color: var(--color-nav-bar-backgound);
+  padding: 1%;
+  border-top: var(--color-borders) solid 1px;
+  border-bottom: var(--color-borders) solid 1px;
 }
 
 .footer {
-  background-color: #221b1b;
-  color: #ffffff;
+  background-color: var(--color-main-background);
+  color: var(--color-fonts);
   text-align: center;
   width: 100%;
   height: fit-content;
   font-style: italic;
   font-size: 100%;
-  padding: 20px 10px 20px 10px;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
