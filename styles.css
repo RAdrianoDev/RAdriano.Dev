@@ -4,13 +4,24 @@
   --color-main-background: hsl(0, 11%, 12%);
   --color-profille-picture-shadow: rgba(255, 0, 0, 0.6);
   --color-nav-bar-backgound: #000000;
-  --color-nav-bar-hover: #e8e19c;
+  --color-nav-bar-hover: #868581;
   --color-fonts: #ffffff;
 
   --color-borders: #ffffff;
   --color-background-cards: rgb(113, 108, 108);
   --color-cards-shadow:  rgba(221, 250, 29, 0.6);
 
+  --color-contact-fields-background: #5e5e56;
+  --color-contact-fields-focus: #84847d;
+
+}
+
+*link {
+  color: var(--color-fonts); 
+}
+
+*:visited {
+  color: var(--color-fonts);
 }
 
 body {
@@ -172,3 +183,90 @@ header {
   padding-top: 1%;
   padding-bottom: 1%;
 }
+
+/* Start CSS contact.html */
+
+.body-contact {
+  background-color: var(--color-main-background);
+  color: var(--color-fonts);
+}
+
+.contact-header-form {
+  margin-left: 1%;
+}
+
+input, select, textarea, button {
+  border-radius: 2px;
+  color: var(--color-fonts);
+}
+
+#contact-check {
+  display: inline-block;
+}
+
+.contact-group:before, .contact-group:after {
+  display: table;
+}
+
+.contact-group:after {
+  clear: both;
+}
+
+.contact-field {
+  margin-bottom: 2%;
+}
+
+.contact-field label {
+  margin-bottom: 0.2em;
+  color: var(--color-fonts);
+  display: block;
+}
+
+fieldset.contact-group .contact-field {
+  float: left;
+  margin-right: 1em;
+}
+
+.contact-field input[type="text"], .contact-field input[type="email"], .contact-field input[type="tel"], .contact-field select, .contact-field textarea {
+  padding: 0.2em;
+  border: 1px solid var(--color-borders);
+  box-shadow: 2px 2px 2px var(--color-profille-picture-shadow);
+  display: block;
+  background-color: var(--color-contact-fields-background);
+}
+
+.contact-field select option {
+  padding-right: 1em;
+}
+
+.contact-field input:focus, .contact-field select:focus, .contact-field textarea:focus {
+  background: var(--color-contact-fields-focus);
+}
+
+.contact-button {
+  font-size: 1.2em;
+  background: var(--color-nav-bar-backgound);
+  border: 0;
+  margin-bottom: 1em;
+  color: var(--color-fonts);
+  padding: 0.2em 0.6em;
+  box-shadow: 2px 2px 2px var(--color-profille-picture-shadow);
+  text-shadow: 1px 1px 1px var(--color-cards-shadow);
+  position: relative;
+  /* top: 80%;*/
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+.contact-button:hover {
+  background: var(--color-nav-bar-hover);
+  box-shadow: inset 2px 2px 2px var(--color-profille-picture-shadow-nav-bar-hover);
+  text-shadow: none;
+}
+
+.contact-button, select {
+  cursor: pointer;
+}
+
+/* End of CSS contact.html */

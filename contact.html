@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAdriano Dev - Contact</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAdriano Dev - Contact</title>
   <link rel="stylesheet" href="reset.css" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css" media="screen" />
 </head>
+
 <body>
   <header>
     <img class="header__profile-picture" src="assets/images/raf02.jpg" alt="Picture of profile" />
@@ -15,57 +17,159 @@
 
     <h2 class="header__subtitle">Junior Software Developer</h2>
 
-      <ul class="header__social-media">
-        <li>
-          <a href="https://github.com/RAdrianoDev" target="_blank">
-            <img src="assets/icons/github-8-512.png" alt="gitub icon" />
-          </a>Github
-        </li>
+    <ul class="header__social-media">
+      <li>
+        <a href="https://github.com/RAdrianoDev" target="_blank">
+          <img src="assets/icons/github-8-512.png" alt="gitub icon" />
+        </a>Github
+      </li>
 
-        <li>
-          <a href="https://www.linkedin.com/in/radrianodev/" target="_blank">
-            <img src="assets/icons/linkedin-3-512.png" alt="linkedin icon" />
-          </a>Linkedin
-        </li>
+      <li>
+        <a href="https://www.linkedin.com/in/radrianodev/" target="_blank">
+          <img src="assets/icons/linkedin-3-512.png" alt="linkedin icon" />
+        </a>Linkedin
+      </li>
 
-        <li>
-          <a href="https://t.me/RAdrianoF" target="_blank">
-            <img src="assets/icons/telegram-512.png" alt="telegram icon" />
-          </a>Telegram
-        </li>
+      <li>
+        <a href="https://t.me/RAdrianoF" target="_blank">
+          <img src="assets/icons/telegram-512.png" alt="telegram icon" />
+        </a>Telegram
+      </li>
 
-        <li>
-          <a href="https://api.whatsapp.com/send?phone=14375591367&text=Hello.%20I%20come%20from%20your%20portfolio%20web%20page.%20Can%20we%20talk?"
-            target="_blank">
-            <img src="assets/icons/whatsapp-512.png" alt="whatsApp icon" />
-          </a>whatsApp
-        </li>
-      </ul>
+      <li>
+        <a href="https://api.whatsapp.com/send?phone=14375591367&text=Hello.%20I%20come%20from%20your%20portfolio%20web%20page.%20Can%20we%20talk?"
+          target="_blank">
+          <img src="assets/icons/whatsapp-512.png" alt="whatsApp icon" />
+        </a>whatsApp
+      </li>
+    </ul>
   </header>
 
-    <nav class="nav-bar-contact">
-      <a href="index.html">Home</a>
-      <a href="">News</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    
+  <nav class="nav-bar-contact">
+    <a href="index.html">Home</a>
+    <a href="">News</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="body-contact">
     <main>
-        <div>
-          <h2>A form will be developed here!</h2>
-        </div>
+      <div class="contact-header-form">
+        <h2>We can cal you!</h2>
+        <h3>Fill out the form below and we will keep in touch soon!</h3>
+      </div>
     </main>
 
-    <div class="contact">
-      email: <a href="mailto:ronaldo@radriano.dev">ronaldo@radriano.dev</a>
-    </div>
+    <!-- Form starts here -->
 
-    <footer class="footer">
-        <address>
-          Developed by <a href="index.html">RAdrianoDev &#169; 2023</a><br>
-          Toronto, Canada<br>
-    
-        </address>
-      </footer>
+    <form>
+      <!-- First name and last name field -->
+      <fieldset class="contact-group">
+        <div class="contact-field">
+          <label for="first-name">First Name</label>
+          <input type="text" name="first-name" id="first-name" required>
+        </div>
+
+        <div class="contact-field">
+          <label for="last-name">Last Name</label>
+          <input type="text" name="last-name" id="last-name" required>
+        </div>
+      </fieldset>
+
+      <!-- phone number field -->
+      <div class="contact-field">
+        <label for="fone-number">Contact Number</label>
+        <input type="tel" name="fone-number" id="fone-number">
+        <input type="radio" name="mobile" id="mobile" value="mobile" checked>Mobile
+        <input type="radio" name="phone" id="phone" value="phone">Phone
+      </div>
+
+      <!-- email field -->
+      <div class="contact-field">
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" required>
+      </div>
+
+      <!-- Options using Radio button. Selection where the visitor is from. -->
+      <div class="contact-field">
+        <label>Where did you hear about us?</label>
+        <label>
+          <input type="radio" name="linkedin" value="linkedin" checked>Linkedin
+        </label>
+        <label>
+          <input type="radio" name="friend" value="friend">Friend
+        </label>
+        <label>
+          <input type="radio" name="ads" value="ads">Ads
+        </label>
+        <label>
+          <input type="radio" name="google" value="goolge">Google
+        </label>
+      </div>
+
+      <!-- Options using select option -->
+      <div class="contact-field">
+        <label for="contact-motive">Motive of Contact</label>
+        <select id="contact-motive" required>
+          <option selected disabled value="">Select</option>
+          <option>Job Offer</option>
+          <option>Freelance</option>
+          <option>Network</option>
+          <option>Sugestions</option>
+          <option>Invite</option>
+          <option>Others</option>
+        </select>
+      </div>
+
+      <fieldset class="contact-group">
+        <!-- Options using checkbox -->
+        <div id="contact-check">
+          <label>Select Technologies you already utilize:</label><br><br>
+          <input type="checkbox" id="language1" name="language1" value="HTML">
+          <label for="language1">HTML</label>
+          <input type="checkbox" id="language2" name="language2" value="CSS">
+          <label for="language2">CSS</label>
+          <input type="checkbox" id="language3" name="language3" value="JavaScript">
+          <label for="language3">JavaScript</label>
+          <input type="checkbox" id="language4" name="language4" value="C#">
+          <label for="language4">C#</label>
+          <input type="checkbox" id="language5" name="language5" value="C">
+          <label for="language5">C</label>
+          <input type="checkbox" id="language6" name="language6" value="PHP">
+          <label for="language6">PHP</label>
+          <input type="checkbox" id="language7" name="language7" value="Python">
+          <label for="language7">Pythin</label>
+          <input type="checkbox" id="language8" name="language8" value="JAVA">
+          <label for="language8">JAVA</label>
+        </div>
+      </fieldset>
+
+      <!-- Text box for message from visitor -->
+      <div class="contact-field">
+        <br>
+        <label for="message-box">Message:</label>
+        <textarea rows="10" style="width: 26em" id="message-box" name="message-box">
+        </textarea>
+      </div>
+
+      <!-- Button to submit the contact and message -->
+      <button class="contact-button" type="submit" onsubmit="">Send Message</button>
+
+    </form>
+
+  </div>
+
+  <div class="contact">
+    E-mail: <a href="mailto:ronaldo@radriano.dev">ronaldo@radriano.dev</a>
+  </div>
+
+  <footer class="footer">
+    <address>
+      Developed by <a href="index.html">RAdrianoDev</a> &#169; 2023<br>
+      Toronto, Canada<br>
+
+    </address>
+  </footer>
 
 </body>
+
 </html>
