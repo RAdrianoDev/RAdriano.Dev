@@ -184,6 +184,12 @@ header {
   padding-bottom: 1%;
 }
 
+.observations {
+  font-style: italic;
+  color: var(--color-fonts);
+  margin-left: 1%;
+}
+
 /* Start CSS contact.html */
 
 .body-contact {
