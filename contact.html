@@ -61,24 +61,24 @@
 
     <!-- Form starts here -->
 
-    <form>
+    <form action="./php/send_form.php" method="post">
       <!-- First name and last name field -->
       <fieldset class="contact-group">
         <div class="contact-field">
-          <label for="first-name">First Name</label>
-          <input type="text" name="first-name" id="first-name" required>
+          <label for="first_name">First Name</label>
+          <input type="text" name="first_name" id="first_name" required>
         </div>
 
         <div class="contact-field">
-          <label for="last-name">Last Name</label>
-          <input type="text" name="last-name" id="last-name" required>
+          <label for="last_name">Last Name</label>
+          <input type="text" name="last_name" id="last_name" required>
         </div>
       </fieldset>
 
       <!-- phone number field -->
       <div class="contact-field">
-        <label for="fone-number">Contact Number</label>
-        <input type="tel" name="fone-number" id="fone-number">
+        <label for="fone_number">Contact Number</label>
+        <input type="tel" name="fone_number" id="fone_number">
         <input type="radio" name="mobile" id="mobile" value="mobile" checked>Mobile
         <input type="radio" name="phone" id="phone" value="phone">Phone
       </div>
@@ -108,8 +108,9 @@
 
       <!-- Options using select option -->
       <div class="contact-field">
-        <label for="contact-motive">Motive of Contact</label>
-        <select id="contact-motive" required>
+        <label for="contact_motive">Motive of Contact</label>
+        <!-- "name" was include at the line below to test php function-->
+        <select name="contact_motive" id="contact_motive" required>
           <option selected disabled value="">Select</option>
           <option>Job Offer</option>
           <option>Freelance</option>
@@ -137,7 +138,7 @@
           <input type="checkbox" id="language6" name="language6" value="PHP">
           <label for="language6">PHP</label>
           <input type="checkbox" id="language7" name="language7" value="Python">
-          <label for="language7">Pythin</label>
+          <label for="language7">Python</label>
           <input type="checkbox" id="language8" name="language8" value="JAVA">
           <label for="language8">JAVA</label>
         </div>
@@ -146,8 +147,8 @@
       <!-- Text box for message from visitor -->
       <div class="contact-field">
         <br>
-        <label for="message-box">Message:</label>
-        <textarea rows="10" style="width: 26em" id="message-box" name="message-box">
+        <label for="message_box">Message:</label>
+        <textarea rows="10" style="width: 26em" id="message_box" name="message_box">
         </textarea>
       </div>
 
@@ -155,6 +156,8 @@
       <button class="contact-button" type="submit" onsubmit="">Send Message</button>
 
     </form>
+
+    <!-- Form End  -->
 
   </div>
 
