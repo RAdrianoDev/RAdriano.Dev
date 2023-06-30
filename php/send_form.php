@@ -50,7 +50,7 @@
       <p><b>message_box: </b>$message_box</p>
 
 
-      <p>Este e-mail foi enviado em <b>$send_date</b> às <b>$send_time</b></p>
+      <p>The message was sent successfully on <b>$send_date</b> at <b>$send_time .</b></p>
     </html>
   ";
   
@@ -61,7 +61,7 @@
   //Este sempre deverá existir para garantir a exibição correta dos caracteres
   $headers  = "MIME-Version: 1.0\n";
   $headers .= "Content-type: text/html; charset=iso-8859-1\n";
-  $headers .= "From: $name <$email>";
+  $headers .= "From: $irst_name <$email>";
 
   //Enviar
   mail($receiver, $subject, $file, $headers);
