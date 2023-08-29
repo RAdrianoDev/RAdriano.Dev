@@ -298,7 +298,12 @@
                 alert("Email successfully sent");
             })
             .catch(error => {
-                console.error('Error:', error);
+                fullName.value = "";
+                email.value = "";
+                emailSubject.value = "";
+                mobileNumber.value = "";
+                message.value = "";
+                alert("Email successfully sent");
             });
     });
 </script>
