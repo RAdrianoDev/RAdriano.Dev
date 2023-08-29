@@ -1,125 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <title>RAdriano Dev - Home</title>
-  <link rel="icon" href="assets/icons/iconTch01.png">
-  <link rel="stylesheet" href="reset.css" />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAdriano Dev</title>
+
+    
+    
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header>
-    <img class="header__profile-picture" src="assets/images/raf02.jpg" alt="Picture of profile" />
 
-    <h1 class="header__title">Ronaldo Adriano Ferreira</h1>
+    <!-- header design -->
+    <header class="header">
+        <a href="#" class="logo">RAdriano DEV</a>
 
-    <h2 class="header__subtitle">Software Developer</h2>
+        <i class='bx bx-menu' id="menu-icon"></i>
 
-      <ul class="header__social-media">
-        <li>
-          <a href="https://github.com/RAdrianoDev" target="_blank">
-            <img src="assets/icons/github-8-512.png" alt="gitub icon" />
-          </a>Github
-        </li>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-        <li>
-          <a href="https://www.linkedin.com/in/radrianodev/" target="_blank">
-            <img src="assets/icons/linkedin-3-512.png" alt="linkedin icon" />
-          </a>Linkedin
-        </li>
+    <!-- home section design -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, it's me!</h3>
+            <h1>Ronaldo Ferreira</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>I'm an experienced Accountant transitioning into the world of Computer Programming | HTML5 | CSS | C# | SQL | JavaScript.</p>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/radrianodev/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/RAdrianoDev" target="_blank"><i class='bx bxl-github' ></i></a>
+                <a href="https://api.whatsapp.com/send?phone=14375591367&text=Hello.%20I%20come%20from%20your%20portfolio%20web%20page.%20Can%20we%20talk?"
+                target="_blank"><i class='bx bxl-whatsapp' ></i></a>
+                <a href="https://t.me/RAdrianoF" target="_blank"><i class='bx bxl-telegram' ></i></a>
+                <a href="https://www.facebook.com/ronaldo.adriano.raf/" target="_blank"><i class='bx bxl-facebook'></i></a>
+                <a href="https://twitter.com/Roadrianof" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://www.instagram.com/ronaldo.adriano.f/" target="_blank"><i class='bx bxl-instagram-alt' ></i></a>
+            </div>
+            <a href="cv/Ronaldo Adriano_2023-06-EN.pdf" target="_blank" class="btn">Download CV</a>
+        </div>
 
-        <li>
-          <a href="https://t.me/RAdrianoF" target="_blank">
-            <img src="assets/icons/telegram-512.png" alt="telegram icon" />
-          </a>Telegram
-        </li>
-
-        <li>
-          <a href="https://api.whatsapp.com/send?phone=14375591367&text=Hello.%20I%20come%20from%20your%20portfolio%20web%20page.%20Can%20we%20talk?"
-            target="_blank">
-            <img src="assets/icons/whatsapp-512.png" alt="whatsApp icon" />
-          </a>whatsApp
-        </li>
-      </ul>
-  </header>
-
-  <div class="nav-bar-home">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="games.html">Games</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-
-  <main class="grid-container">
-    <section class="about-me">
-      <h3>About me:</h3>
-      <p>
-        I'm an experienced Accountant transitioning into the world of Computer Programming | HTML5 | CSS | C# | SQL |
-        JavaScript.<br>
-        <br>
-        During my career so far, I have acquired a foundation in several key programming languages, including HTML5,
-        CSS, C#, SQL, and JavaScript and now I'm studying in a Computer Programming program. These technical skills,
-        combined with my analytical mindset and attention to detail, provide a good perspective as I jump into this new
-        professional chapter.<br>
-        <br>
-        Passionate programmer and a quick learner, constantly seeking to enhance my skills. Dedicated to precision and
-        excellence, consistently striving to optimize development and communication
-        workflows. I have a deep appreciation for straightforward and refined solutions to any challenge.
-      </p>
-
-      <ul class="about-me__soft-skills">
-        <h2><li>Soft Skills:</li></h2>
-        <li>- Good written and verbal communication</li>
-        <li>- Ability to be proactive and in-tune with clients' needs</li>
-        <li>- Strong attention to details</li>
-        <li>- Strong organizational skills</li>
-        <li>- Team-spirit</li>
-        <li>- English: advanced</li>
-        <li>- Ability to solve problems and think critically</li>
-      </ul>
-
-      <ul class="about-me__hard-skills">
-        <h2><li>Hard Skills/Technologies:</li></h2>
-        <li>- HTML5</li>
-        <li>- CSS3</li>
-        <li>- Javascript</li>
-        <li>- Git/Github</li>
-        <li>- React</li>
-        <li>- C#</li>
-      </ul>
-    </section>
-
-    <section class="other-jobs">
-      <h3>Other Projects Developed:</h3>
-        <div class="other-jobs__card-barbershop">
-          <a href="https://radrianodev.github.io/Front-end/" target="_blank">
-            <img src="assets/images/preview-barbeariaalura.png" alt="website preview of barbearia alura" />
-            <p>
-              Website developed during the course of HTML5 and CSS3 that can
-              simulate a website of a barbershop.
-            </p>
-          </a>
+        <div class="home-img">
+            <img src="assets/home-r.jpeg" alt="Picture of Ronaldo Ferreira">
         </div>
     </section>
-  </main>
 
-  <div class="contact">
-    E-mail: <a href="mailto:ronaldo@radriano.dev">ronaldo@radriano.dev</a>
-  </div>
+    <!-- about section design -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="assets/about-r.jpeg" alt="Picture of Ronaldo Ferreira">
+        </div>
 
-  <footer class="footer">
-    <address>
-      Developed by <a href="index.html">RAdrianoDev</a> &#169; 2023<br>
-      Toronto, Canada<br>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Frontend Developer</h3>
+            <p>During my career so far, I have acquired a foundation in several key programming languages, including HTML5, CSS, C#, SQL, and JavaScript and now I'm studying in a Computer Programming program. These technical skills, combined with my analytical mindset and attention to detail, provide a good perspective as I jump into this new professional chapter.</p>
+            <a href="" class="btn">Read More</a>
+        </div>
+    </section>
 
-    </address>
-  </footer>
+
+    <!-- services section design -->
+    <section class="services" id="services">
+        <h2 class="heading">My <span>Services </span>and <span>Skills</span></h2>
+
+        <div class="services-container">
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Web development</h3>
+                <p>Web development services are the backbone of online innovation, combining design and coding expertise to build functional and visually appealing websites. These services encompass everything from responsive layouts for various devices to complex backend integrations, creating a seamless digital experience that's both user-friendly and technologically advanced.</p>
+                <div class="btn">Read More</div>
+            </div>
+
+            <div class="services-box">
+                <i class='bx bxs-paint'></i>
+                <h3>Hard Skills / Technologies</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>Git/Github</li>
+                    <li>React</li>
+                    <li>C#</li>
+                </ul>
+                <div class="btn">Read More</div>
+            </div>
+
+            <div class="services-box">
+                <i class='bx bx-bar-chart-alt'></i>
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Good Communication.</li>
+                    <li>Ability to be proactive and in-tune with clients' needs.</li>
+                    <li>Strong attention to details.</li>
+                    <li>Strong organizational skills.</li>
+                    <li>Team-spirit.</li>
+                    <li>English: advanced.</li>
+                    <li>Ability to solve problems and think critically.</li>
+                </ul>
+                <div class="btn">Read More</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- portfolio section design -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Project</span></h2>
+        <h3 class="heading-sub">Web <span>Development</span></h3>
+
+        <div class="portfolio-container">
+
+            <div class="portfolio-box">
+                <img src="assets/portfolio1.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>AG Dream Homes: final project for Web Authoring, 1st semester in Computer Programming.</p>
+                    <a href="https://radrianodev.github.io/AGDreamHomes/" target="_blank"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            
+            <div class="portfolio-box">
+                <img src="assets/portfolio2.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>AF ArtGallery: developed for Web Authoring, 1st semester in Computer Programming.</p>
+                    <a href="https://radrianodev.github.io/AF_ArtGallery/" target="_blank"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        
+            <div class="portfolio-box">
+                <img src="assets/portfolio3.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>My Shih Tzu: assignment developed for Web Authoring, 1st semester in Computer Programming.</p>
+                    <a href="https://radrianodev.github.io/My-Shih_Tzu/" target="_blank"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="assets/portfolio1.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>University Toronto: project developed for training effects application.</p>
+                    <a href="https://radrianodev.github.io/University_Toronto/" target="_blank"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        
+            <!-- <div class="portfolio-box">
+                <img src="assets/portfolio2.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, aspernatur.</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        
+            <div class="portfolio-box">
+                <img src="assets/portfolio3.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, aspernatur.</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div> -->
+        </div>
+        
+        <h3 class="heading-sub">JavaScript <span>Games</span></h3>
+        
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                    <img src="assets/portfolio4.jpg" alt="">
+                    <div class="portfolio-layer">
+                        <h4>Cross Freeway</h4>
+                        <p>Play this Game using the keys "arrow up" and "arrow down".</p>
+                        <a href="games/crossFreeway/crossFreeway.html"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            
+                <div class="portfolio-box">
+                    <img src="assets/portfolio5.jpg" alt="">
+                    <div class="portfolio-layer">
+                        <h4>Pong Game</h4>
+                        <p>Play this Game using the keys "arrow up" and "arrow down" to move the racquet to reach the ball on time.</p>
+                        <a href="games/pongGame/pongGame.html"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            
+                <!-- <div class="portfolio-box">
+                    <img src="assets/portfolio6.jpg" alt="">
+                    <div class="portfolio-layer">
+                        <h4>Web Design</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, aspernatur.</p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section design -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+
+        <!-- Using Free services from "https://formsquash.io" to send form to e-mails.  -->
+        <form action="https://formsquash.io/f/RcAn5BKryMwC06lSg2Tv" method="post">
+            <div class="input-box">
+                <input type="text" name="full_name" id="full_name" placeholder="Full Name" required>
+                <input type="email" name="email" id="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-box">
+                <input type="number" name="mobile_number" id="mobile_number" placeholder="Mobile Number">
+                <input type="text" name="email_subject" id="email_subject" placeholder="Email Subject" required>
+            </div>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <!-- this field to include additional spam protections -->
+            <input type="hidden" name="_gotcha">
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <!-- footer design -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copiright &copy; 2023 by RAdrianoDev | all Rights Reserved</p>
+        </div>
+ 
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+
+    <!-- scrool reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- typed js -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- custom js -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>

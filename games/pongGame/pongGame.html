@@ -1,87 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <title>RAdriano Dev - Pong Game</title>
-  <link rel="icon" href="../../assets/icons/iconTch01.png">
-  <link rel="stylesheet" href="../../reset.css"/>
-  <link rel="stylesheet" href="../../styles.css"/>
-  <script src="p5.min.js"></script>
-  <script src="p5.dom.min.js"></script>
-  <script src="p5.sound.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAdriano Dev - Pong Game</title>
+
+    
+    
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <!-- Game -->
+    <script src="p5.min.js"></script>
+    <script src="p5.dom.min.js"></script>
+    <script src="p5.sound.min.js"></script>
 </head>
 
 <body>
-  <header>
-    <!-- <img class="header__profile-picture" src="\RAdriano.Dev\assets/images/raf02.jpg" alt="Picture of profile" /> -->
 
-    <h1 class="header__title">Ronaldo Adriano Ferreira</h1>
+    <!-- header design -->
+    <header class="header">
+        <a href="#" class="logo">RAdriano DEV</a>
 
-    <h2 class="header__subtitle">Software Developer</h2>
+        <i class='bx bx-menu' id="menu-icon"></i>
 
-    <!-- <ul class="header__social-media">
-      <li>
-        <a href="https://github.com/RAdrianoDev" target="_blank">
-          <img src="\RAdriano.Dev\assets/icons/github-8-512.png" alt="gitub icon" />
-        </a>Github
-      </li>
+        <nav class="navbar">
+            <a href="../../index.html" class="active">Home</a>
+            <a href="../../index.html#about">About</a>
+            <a href="../../index.html#services">Services</a>
+            <a href="../../index.html#portfolio">Portfolio</a>
+            <a href="../../index.html#contact">Contact</a>
+        </nav>
+    </header>
 
-      <li>
-        <a href="https://www.linkedin.com/in/radrianodev/" target="_blank">
-          <img src="\RAdriano.Dev\assets/icons/linkedin-3-512.png" alt="linkedin icon" />
-        </a>Linkedin
-      </li>
+    <main>
+        <!-- home section design -->
+        <div class="home-game" id="home-game">
+            
+            <div id="pongGame">
+                <script src="pongGame.js"></script>
+                <script src="p5.collide2d.js"></script>
+            </div>
 
-      <li>
-        <a href="https://t.me/RAdrianoF" target="_blank">
-          <img src="\RAdriano.Dev\assets/icons/telegram-512.png" alt="telegram icon" />
-        </a>Telegram
-      </li>
+        </div>
 
-      <li>
-        <a href="https://api.whatsapp.com/send?phone=14375591367&text=Hello.%20I%20come%20from%20your%20portfolio%20web%20page.%20Can%20we%20talk?"
-          target="_blank">
-          <img src="\RAdriano.Dev\assets/icons/whatsapp-512.png" alt="whatsApp icon" />
-        </a>whatsApp
-      </li>
-    </ul> -->
-  </header>
+    </main>
 
-  <nav class="nav-bar-contact">
-    <a href="../../index.html">Home</a>
-    <a href="../../games.html">Games</a>
-    <a href="../../contact.html">Contact</a>
-  </nav>
+    <!-- footer design -->
+    <!-- <footer class="footer">
+        <div class="footer-text">
+            <p>Copiright &copy; 2023 by RAdrianoDev | all Rights Reserved</p>
+        </div>
+ 
+        <div class="footer-iconTop">
+            <a href="../../index.html#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer> -->
 
-  <main>
-    <div class="games-titles">
-      <h2>Enjoy Pong Game</h2>
-      <p class="observations">Using the Keys "arrow up" and "arrow down" move the racquet to reach the ball on time.</p>
-    </div>
 
-    <!-- Here Start the game call -->
-    <div id="pongGame">
-      <script src="pongGame.js"></script>
-      <script src="p5.collide2d.js"></script>
-    </div>
+    <!-- scrool reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 
-  </main>
+    <!-- typed js -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
-  <!-- <div class="contact">
-    E-mail: <a href="mailto:ronaldo@radriano.dev">ronaldo@radriano.dev</a>
-  </div>
-
-  <footer class="footer">
-    <address>
-      Developed by <a href="index.html">RAdrianoDev</a> &#169; 2023<br>
-      Toronto, Canada<br>
-
-    </address>
-  </footer> -->
-
+    <!-- custom js -->
+    <script src="../../js/script.js"></script>
 </body>
 
 </html>
