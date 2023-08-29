@@ -280,7 +280,8 @@
         const options = {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json' 
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': 'https://radriano.dev/'
             },
             body: JSON.stringify(data) 
         };
@@ -289,7 +290,12 @@
         fetch(url, options)
             .then(response => response.json()) 
             .then(data => {
-                console.log('Response data:', data);
+                fullName.value = "";
+                email.value = "";
+                emailSubject.value = "";
+                mobileNumber.value = "";
+                message.value = "";
+                alert("Email successfully sent");
             })
             .catch(error => {
                 console.error('Error:', error);
