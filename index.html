@@ -214,7 +214,7 @@
         <h2 class="heading">Contact <span>Me!</span></h2>
 
         <!-- Using Free services from "https://formsquash.io" to send form to e-mails.  -->
-        <form action="https://formsquash.io/f/RcAn5BKryMwC06lSg2Tv" method="post">
+        <form id="form">
             <div class="input-box">
                 <input type="text" name="full_name" id="full_name" placeholder="Full Name" required>
                 <input type="email" name="email" id="email" placeholder="Email Address" required>
@@ -226,7 +226,7 @@
             <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
             <!-- this field to include additional spam protections -->
             <input type="hidden" name="_gotcha">
-            <input type="submit" value="Send Message" class="btn">
+            <button type="submit" class="btn">Send Message</button>
         </form>
     </section>
 
@@ -253,3 +253,46 @@
 </body>
 
 </html>
+
+<script type="text/javascript">
+
+    let form = document.getElementById("form");
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const fullName = document.getElementById('full_name');
+        const email = document.getElementById('email');
+        const emailSubject = document.getElementById('email_subject');
+        const mobileNumber = document.getElementById('mobile_number');
+        const message = document.getElementById('message');
+        const url = 'https://formsquash.io/f/RcAn5BKryMwC06lSg2Tv';
+
+        const data = {
+            email: email.value,
+            full_name: fullName.value,
+            mobile_number: mobileNumber.value,
+            email_subject: emailSubject.value,
+            message: message.value
+        };
+
+      
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json' 
+            },
+            body: JSON.stringify(data) 
+        };
+
+      
+        fetch(url, options)
+            .then(response => response.json()) 
+            .then(data => {
+                console.log('Response data:', data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    });
+</Script>
