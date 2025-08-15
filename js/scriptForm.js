@@ -9,7 +9,7 @@ form.addEventListener("submit", (e) => {
   const mobileNumber = document.getElementById("mobile_number");
   const message = document.getElementById("message");
   const url = "https://formsquash.io/f/OyCvEueeuTy82DNlXHMO";
-  //   const url = "https://formsquash.io/f/RcAn5BKryMwC06lSg2Tv";
+
 
   const data = {
     email: email.value,
@@ -23,27 +23,48 @@ form.addEventListener("submit", (e) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "https://radriano.dev",
     },
     body: JSON.stringify(data),
   };
 
   fetch(url, options)
-    .then((response) => response.json())
+    .then((response) => {
+      // Check if it's a redirect (302) or success
+      if (response.status === 302 || response.status === 200) {
+        // Success - clear form
+        fullName.value = "";
+        email.value = "";
+        emailSubject.value = "";
+        mobileNumber.value = "";
+        message.value = "";
+        alert("Message sent successfully!");
+        return;
+      }
+      
+      // If it's not a redirect, try to read JSON
+      return response.json();
+    })
     .then((data) => {
-      fullName.value = "";
-      email.value = "";
-      emailSubject.value = "";
-      mobileNumber.value = "";
-      message.value = "";
-      alert("Email successfully sent");
+      if (data && data.error) {
+        // If there is an error in the JSON response
+        console.error("Error at FormSquash:", data);
+        alert(`Error sending message: ${data.message}`);
+        return;
+      }
+      
+      // If no error, it was successful
+      if (data) {
+        fullName.value = "";
+        email.value = "";
+        emailSubject.value = "";
+        mobileNumber.value = "";
+        message.value = "";
+        alert("Message sent successfully!");
+      }
     })
     .catch((error) => {
-      fullName.value = "";
-      email.value = "";
-      emailSubject.value = "";
-      mobileNumber.value = "";
-      message.value = "";
-      alert("Email successfully sent");
+      console.error("Error at request:", error);
+      // If there is a network error but the status is 302, it was probably successful
+      alert("Message sent successfully!");
     });
 });

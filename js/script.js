@@ -57,7 +57,7 @@ ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
 const typed = new Typed(".multiple-text", {
   strings: [
     "a Full Stack Developer",
-    "an IT Student",
+    "an IT Administrator",
     "an ERP Consultant",
     "an Accountant",
   ],
