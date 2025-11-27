@@ -1,31 +1,31 @@
-//variáveis da bolinha
+// Ball variables
 let xBolinha = 300;
 let yBolinha = 200;
 let diametro = 13;
 let raio = diametro / 2 ;
 
-//velocidade da bolinha
+// Ball velocity
 let velocidadeXBolinha = 6;
 let velocidadeYBolinha = 6;
 let raqueteComprimento = 10;
 let raqueteAltura = 90;
 
-//variáveis da raquete
+// Paddle variables
 let xRaquete = 5;
 let yRaquete = 150;
 
-//variáveis do oponente
+// Opponent variables
 let xRaqueteOponente = 585;
 let yRaqueteOponente = 150;
 let velocidadeYOponente;
 
 let colidiu = false;
 
-//placar do jogo
+// Game score
 let meusPontos = 0;
 let pontosDoOponente = 0;
 
-//sons do jogo
+// Game sounds
 let ponto;
 let raquetada;
 let trilha;
