@@ -1,4 +1,4 @@
-//código do carro
+// Car code
 
 let xCarros = [600, 600, 600, 600, 600, 600];
 let yCarros = [40, 96, 150, 210, 270, 318];

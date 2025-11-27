@@ -1,4 +1,4 @@
-//código do ator
+// Actor/Player code
 let xAtor = 85;
 let yAtor = 366;
 let colisao = false;
