@@ -1,5 +1,6 @@
 function setup() {
   const canvas =createCanvas(500, 400);
+  canvas.parent("crossFreeway");
   somDaTrilha.loop();
 }
 
