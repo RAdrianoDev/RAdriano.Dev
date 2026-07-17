@@ -44,13 +44,17 @@
 
 <body>
 
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- header design -->
     <header class="header">
         <a href="#" class="logo">RAdriano DEV</a>
 
-        <i class='bx bx-menu' id="menu-icon"></i>
+        <button type="button" id="menu-icon" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+            <i class='bx bx-menu' aria-hidden="true"></i>
+        </button>
 
-        <nav class="navbar">
+        <nav class="navbar" id="primary-navigation" aria-label="Primary navigation">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
@@ -59,22 +63,23 @@
         </nav>
     </header>
 
+    <main id="main-content" tabindex="-1">
     <!-- home section design -->
     <section class="home" id="home">
         <div class="home-content">
-            <h3>Hello!</h3>
+            <p class="home-eyebrow">Hello!</p>
             <h1>I am Ronaldo Adriano, </h1>
-            <h3>and I'm <span class="multiple-text"></span>.</h3>
+            <p class="home-role">and I'm <span class="sr-only">a Full Stack Developer, an IT Administrator, and an ERP Consultant.</span><span class="multiple-text" aria-hidden="true"></span><span aria-hidden="true">.</span></p>
             <p>I'm an experienced Accountant transitioning into the world of Computer Programming | HTML5 | CSS | C# | SQL | JavaScript.</p>
             
             <div class="social-media">
-                <a href="https://www.linkedin.com/in/radrianodev/" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/RAdrianoDev" target="_blank" rel="noopener noreferrer" title="GitHub Profile"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/radrianodev/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class='bx bxl-linkedin' aria-hidden="true"></i></a>
+                <a href="https://github.com/RAdrianoDev" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class='bx bxl-github' aria-hidden="true"></i></a>
                 <a href="https://api.whatsapp.com/send?phone=14375591367&text=Hello.%20I%20come%20from%20your%20portfolio%20web%20page.%20Can%20we%20talk?"
-                   target="_blank" rel="noopener noreferrer" title="WhatsApp Message"><i class='bx bxl-whatsapp' ></i></a>
+                   target="_blank" rel="noopener noreferrer" aria-label="Send a WhatsApp message"><i class='bx bxl-whatsapp' aria-hidden="true"></i></a>
                 <!-- <a href="https://t.me/RAdrianoF" target="_blank" rel="noopener noreferrer" title="Telegram Profile"><i class='bx bxl-telegram' ></i></a> -->
-                <a href="https://www.facebook.com/radrianodev/" target="_blank" rel="noopener noreferrer" title="Facebook Profile"><i class='bx bxl-facebook'></i></a>
-                <a href="https://www.instagram.com/radrianodev/" target="_blank" rel="noopener noreferrer" title="Instagram Profile"><i class='bx bxl-instagram-alt' ></i></a>
+                <a href="https://www.facebook.com/radrianodev/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile"><i class='bx bxl-facebook' aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/radrianodev/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile"><i class='bx bxl-instagram-alt' aria-hidden="true"></i></a>
             </div>
 
             <a href="cv/Ronaldo Adriano Ferreira_2025-06.pdf" target="_blank" rel="noopener noreferrer" class="btn">Download CV 2026</a>
@@ -106,14 +111,14 @@
 
         <div class="services-container">
             <div class="services-box">
-                <i class='bx bx-code-alt'></i>
+                <i class='bx bx-code-alt' aria-hidden="true"></i>
                 <h3>Web development</h3>
                 <p>Web development services are the backbone of online innovation, combining design and coding expertise to build functional and visually appealing websites. These services encompass everything from responsive layouts for various devices to complex backend integrations, creating a seamless digital experience that's both user-friendly and technologically advanced.</p>
                 <a href="https://www.linkedin.com/in/radrianodev/" target="_blank" rel="noopener noreferrer" class="btn" title="View LinkedIn Profile">Read More</a>
             </div>
 
             <div class="services-box">
-                <i class='bx bxs-paint'></i>
+                <i class='bx bxs-paint' aria-hidden="true"></i>
                 <h3>Hard Skills / Technologies</h3>
                 <ul>
                     <li>HTML5</li>
@@ -127,7 +132,7 @@
             </div>
 
             <div class="services-box">
-                <i class='bx bx-bar-chart-alt'></i>
+                <i class='bx bx-bar-chart-alt' aria-hidden="true"></i>
                 <h3>Soft Skills</h3>
                 <ul>
                     <li>Good Communication.</li>
@@ -151,38 +156,38 @@
         <div class="portfolio-container">
 
             <div class="portfolio-box">
-                <img src="assets/portfolio1.jpg" alt="AG Dream Homes - Web Development Project" loading="lazy">
+                <img src="assets/portfolio1.jpg" alt="AG Dream Homes - Web Development Project" width="640" height="426" loading="lazy" decoding="async">
                 <div class="portfolio-layer">
                     <h4>Web Design</h4>
                     <p>AG Dream Homes: final project for Web Authoring, 1st semester in Computer Programming.</p>
-                    <a href="https://radrianodev.github.io/AGDreamHomes/" target="_blank" rel="noopener noreferrer" title="AG Dream Homes Project"><i class='bx bx-link-external'></i></a>
+                    <a href="https://radrianodev.github.io/AGDreamHomes/" target="_blank" rel="noopener noreferrer" aria-label="View AG Dream Homes live demo"><span>Live demo</span><i class='bx bx-link-external' aria-hidden="true"></i></a>
                 </div>
             </div>
             
             <div class="portfolio-box">
-                <img src="assets/portfolio2.jpg" alt="AF ArtGallery - Web Development Project" loading="lazy">
+                <img src="assets/portfolio2.jpg" alt="AF ArtGallery - Web Development Project" width="640" height="426" loading="lazy" decoding="async">
                 <div class="portfolio-layer">
                     <h4>Web Design</h4>
                     <p>AF ArtGallery: developed for Web Authoring, 1st semester in Computer Programming.</p>
-                    <a href="https://radrianodev.github.io/AF_ArtGallery/" target="_blank" rel="noopener noreferrer" title="AF ArtGallery"><i class='bx bx-link-external'></i></a>
+                    <a href="https://radrianodev.github.io/AF_ArtGallery/" target="_blank" rel="noopener noreferrer" aria-label="View AF ArtGallery live demo"><span>Live demo</span><i class='bx bx-link-external' aria-hidden="true"></i></a>
                 </div>
             </div>
         
             <div class="portfolio-box">
-                <img src="assets/portfolio3.jpg" alt="My Shih Tzu - Web Development Project" loading="lazy">
+                <img src="assets/portfolio3.jpg" alt="My Shih Tzu - Web Development Project" width="640" height="426" loading="lazy" decoding="async">
                 <div class="portfolio-layer">
                     <h4>Web Design</h4>
                     <p>My Shih Tzu: assignment developed for Web Authoring, 1st semester in Computer Programming.</p>
-                    <a href="https://radrianodev.github.io/My-Shih_Tzu/" target="_blank" rel="noopener noreferrer" title="My Shih Tzu"><i class='bx bx-link-external'></i></a>
+                    <a href="https://radrianodev.github.io/My-Shih_Tzu/" target="_blank" rel="noopener noreferrer" aria-label="View My Shih Tzu live demo"><span>Live demo</span><i class='bx bx-link-external' aria-hidden="true"></i></a>
                 </div>
             </div>
 
             <div class="portfolio-box">
-                <img src="assets/portfolio1.jpg" alt="University Toronto - Web Development Project" loading="lazy">
+                <img src="assets/portfolio1.jpg" alt="University Toronto - Web Development Project" width="640" height="426" loading="lazy" decoding="async">
                 <div class="portfolio-layer">
                     <h4>Web Design</h4>
                     <p>University Toronto: project developed for training effects application.</p>
-                    <a href="https://radrianodev.github.io/University_Toronto/" target="_blank" rel="noopener noreferrer" title="University Toronto"><i class='bx bx-link-external'></i></a>
+                    <a href="https://radrianodev.github.io/University_Toronto/" target="_blank" rel="noopener noreferrer" aria-label="View University Toronto live demo"><span>Live demo</span><i class='bx bx-link-external' aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
@@ -191,20 +196,20 @@
         
         <div class="portfolio-container">
             <div class="portfolio-box">
-                <img src="assets/portfolio4.jpg" alt="Cross Freeway - JavaScript Game" loading="lazy">
+                <img src="assets/portfolio4.jpg" alt="Cross Freeway - JavaScript Game" width="640" height="426" loading="lazy" decoding="async">
                 <div class="portfolio-layer">
                     <h4>Cross Freeway</h4>
                     <p>Play this Game using the keys "arrow up" and "arrow down".</p>
-                    <a href="games/crossFreeway/crossFreeway.html" title="Cross Freeway Game"><i class='bx bx-link-external'></i></a>
+                    <a href="games/crossFreeway/crossFreeway.html" aria-label="Play Cross Freeway game"><span>Play game</span><i class='bx bx-link-external' aria-hidden="true"></i></a>
                 </div>
             </div>
 
             <div class="portfolio-box">
-                <img src="assets/portfolio5.jpg" alt="Pong Game - JavaScript Game" loading="lazy">
+                <img src="assets/portfolio5.jpg" alt="Pong Game - JavaScript Game" width="640" height="426" loading="lazy" decoding="async">
                 <div class="portfolio-layer">
                     <h4>Pong Game</h4>
                     <p>Play this Game using the keys "arrow up" and "arrow down" to move the racquet to reach the ball on time.</p>
-                    <a href="games/pongGame/pongGame.html" title="Pong Game"><i class='bx bx-link-external'></i></a>
+                    <a href="games/pongGame/pongGame.html" aria-label="Play Pong game"><span>Play game</span><i class='bx bx-link-external' aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
@@ -218,36 +223,42 @@
         <form id="form">
             <div class="input-box">
                 <div class="input-wrapper">
-                    <input type="text" name="full_name" id="full_name" placeholder="Full Name" required>
-                    <span class="field-error" id="full_name_error"></span>
+                    <label for="full_name" class="sr-only">Full name</label>
+                    <input type="text" name="full_name" id="full_name" placeholder="Full Name" autocomplete="name" maxlength="100" aria-describedby="full_name_error" aria-invalid="false" required>
+                    <span class="field-error" id="full_name_error" aria-live="polite"></span>
                 </div>
                 <div class="input-wrapper">
-                    <input type="email" name="email" id="email" placeholder="Email Address" required>
-                    <span class="field-error" id="email_error"></span>
+                    <label for="email" class="sr-only">Email address</label>
+                    <input type="email" name="email" id="email" placeholder="Email Address" autocomplete="email" maxlength="255" aria-describedby="email_error" aria-invalid="false" required>
+                    <span class="field-error" id="email_error" aria-live="polite"></span>
                 </div>
             </div>
             <div class="input-box">
                 <div class="input-wrapper">
-                    <input type="tel" name="mobile_number" id="mobile_number" placeholder="Mobile Number">
-                    <span class="field-error" id="mobile_number_error"></span>
+                    <label for="mobile_number" class="sr-only">Mobile number (optional)</label>
+                    <input type="tel" name="mobile_number" id="mobile_number" placeholder="Mobile Number (optional)" autocomplete="tel" inputmode="tel" aria-describedby="mobile_number_error" aria-invalid="false">
+                    <span class="field-error" id="mobile_number_error" aria-live="polite"></span>
                 </div>
                 <div class="input-wrapper">
-                    <input type="text" name="email_subject" id="email_subject" placeholder="Email Subject" required>
-                    <span class="field-error" id="email_subject_error"></span>
+                    <label for="email_subject" class="sr-only">Email subject</label>
+                    <input type="text" name="email_subject" id="email_subject" placeholder="Email Subject" maxlength="200" aria-describedby="email_subject_error" aria-invalid="false" required>
+                    <span class="field-error" id="email_subject_error" aria-live="polite"></span>
                 </div>
             </div>
             <div class="textarea-wrapper">
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-                <span class="field-error" id="message_error"></span>
+                <label for="message" class="sr-only">Your message</label>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" maxlength="2000" aria-describedby="message_error" aria-invalid="false" required></textarea>
+                <span class="field-error" id="message_error" aria-live="polite"></span>
             </div>
             <!-- this field to include additional spam protections -->
             <input type="hidden" name="_gotcha">
             <button type="submit" class="btn">Send Message</button>
         </form>
     </section>
+    </main>
 
     <!-- Toast notification container -->
-    <div class="toast-container" id="toast-container"></div>
+    <div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="true"></div>
 
     <!-- footer design -->
     <footer class="footer">
@@ -256,7 +267,7 @@
         </div>
  
         <div class="footer-iconTop">
-            <a href="#home" title="Back to top"><i class='bx bx-up-arrow-alt'></i></a>
+            <a href="#home" aria-label="Back to top"><i class='bx bx-up-arrow-alt' aria-hidden="true"></i></a>
         </div>
     </footer>
 

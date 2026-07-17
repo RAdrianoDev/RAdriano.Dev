@@ -11,6 +11,7 @@ function showToast(message, type = 'info', duration = 3000) {
 
   const toast = document.createElement('div');
   toast.className = `toast ${type}`;
+  toast.setAttribute('role', type === 'error' ? 'alert' : 'status');
   
   const icons = {
     success: '✓',
@@ -20,9 +21,9 @@ function showToast(message, type = 'info', duration = 3000) {
   };
 
   toast.innerHTML = `
-    <span class="toast-icon">${icons[type] || icons.info}</span>
+    <span class="toast-icon" aria-hidden="true">${icons[type] || icons.info}</span>
     <div class="toast-content">${message}</div>
-    <button class="toast-close" onclick="this.parentElement.remove()">&times;</button>
+    <button class="toast-close" type="button" aria-label="Close notification" onclick="this.parentElement.remove()">&times;</button>
   `;
 
   toastContainer.appendChild(toast);
@@ -46,6 +47,7 @@ function showFieldError(fieldId, message) {
   if (field && errorElement) {
     field.classList.remove('valid');
     field.classList.add('invalid');
+    field.setAttribute('aria-invalid', 'true');
     errorElement.textContent = message;
     errorElement.className = 'field-error';
   }
@@ -58,6 +60,7 @@ function showFieldSuccess(fieldId) {
   if (field && errorElement) {
     field.classList.remove('invalid');
     field.classList.add('valid');
+    field.setAttribute('aria-invalid', 'false');
     errorElement.textContent = '';
     errorElement.className = '';
   }
@@ -69,6 +72,7 @@ function clearFieldFeedback(fieldId) {
   
   if (field && errorElement) {
     field.classList.remove('invalid', 'valid');
+    field.setAttribute('aria-invalid', 'false');
     errorElement.textContent = '';
     errorElement.className = '';
   }
@@ -279,6 +283,13 @@ function validateForm(fullName, email, emailSubject, message, mobileNumber) {
   }};
 }
 
+function focusFirstInvalidField() {
+  const firstInvalidField = form.querySelector('.invalid');
+  if (firstInvalidField) {
+    firstInvalidField.focus();
+  }
+}
+
 // Helper function to calculate new cursor position after formatting
 function calculateNewCursorPosition(oldValue, newValue, oldCursorPos) {
   // Count digits before cursor in old value
@@ -441,6 +452,7 @@ form.addEventListener("submit", async (e) => {
 
   if (!isFullNameValid || !isEmailValid || !isSubjectValid || !isMessageValid || !isPhoneValid) {
     showToast('Please fix the errors in the form before submitting.', 'error', 4000);
+    focusFirstInvalidField();
     return;
   }
 
@@ -453,6 +465,7 @@ form.addEventListener("submit", async (e) => {
   
   if (!validation.isValid) {
     showToast('Please fix the errors in the form before submitting.', 'error', 4000);
+    focusFirstInvalidField();
     submitButton.disabled = false;
     submitButton.textContent = 'Send Message';
     return;
@@ -505,4 +518,3 @@ form.addEventListener("submit", async (e) => {
     submitButton.textContent = 'Send Message';
   }
 });
-

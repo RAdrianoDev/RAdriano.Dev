@@ -1,15 +1,37 @@
 /*==================== toggle icon navbar ====================*/
 let menuIcon = document.querySelector("#menu-icon");
+let menuIconGlyph = menuIcon.querySelector("i");
 let navbar = document.querySelector(".navbar");
 
-menuIcon.onclick = () => {
-  menuIcon.classList.toggle("bx-x");
-  navbar.classList.toggle("active");
-};
+function setMenuOpen(isOpen) {
+  navbar.classList.toggle("active", isOpen);
+  menuIconGlyph.classList.toggle("bx-menu", !isOpen);
+  menuIconGlyph.classList.toggle("bx-x", isOpen);
+  menuIcon.setAttribute("aria-expanded", String(isOpen));
+  menuIcon.setAttribute(
+    "aria-label",
+    isOpen ? "Close navigation" : "Open navigation"
+  );
+}
+
+menuIcon.addEventListener("click", () => {
+  setMenuOpen(!navbar.classList.contains("active"));
+});
 
 /*==================== scroll sections active link ====================*/
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav a");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => setMenuOpen(false));
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && navbar.classList.contains("active")) {
+    setMenuOpen(false);
+    menuIcon.focus();
+  }
+});
 
 window.onscroll = () => {
   sections.forEach((sec) => {
@@ -33,39 +55,50 @@ window.onscroll = () => {
   header.classList.toggle("sticky", window.scrollY > 100);
 
   /*==================== remove toggle icon and navbar when click navbar link (scroll) ====================*/
-  menuIcon.classList.remove("bx-x");
-  navbar.classList.remove("active");
+  setMenuOpen(false);
 };
 
 /*==================== scroll reveal ====================*/
-ScrollReveal({
-  //reset: true,
-  distance: "80px",
-  duration: 2000,
-  delay: 200,
-});
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches;
 
-ScrollReveal().reveal(".home-content, .heading", { origin: "top" });
-ScrollReveal().reveal(
-  ".home-img, .services-container, portfolio-box, .contact form",
-  { origin: "bottom" }
-);
-ScrollReveal().reveal(".home-content h1, .about-img", { origin: "left" });
-ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
+if (!prefersReducedMotion && typeof ScrollReveal !== "undefined") {
+  ScrollReveal({
+    //reset: true,
+    distance: "80px",
+    duration: 2000,
+    delay: 200,
+  });
+
+  ScrollReveal().reveal(".home-content, .heading", { origin: "top" });
+  ScrollReveal().reveal(
+    ".home-img, .services-container, portfolio-box, .contact form",
+    { origin: "bottom" }
+  );
+  ScrollReveal().reveal(".home-content h1, .about-img", { origin: "left" });
+  ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
+}
 
 /*==================== typed js ====================*/
-const typed = new Typed(".multiple-text", {
-  strings: [
-    "a Full Stack Developer",
-    "an IT Administrator",
-    "an ERP Consultant",
-    // "an Accountant",
-  ],
-  typeSpeed: 100,
-  backSpeed: 100,
-  backDelay: 1000,
-  loop: true,
-});
+const multipleText = document.querySelector(".multiple-text");
+
+if (prefersReducedMotion || typeof Typed === "undefined") {
+  multipleText.textContent = "a Full Stack Developer";
+} else {
+  new Typed(".multiple-text", {
+    strings: [
+      "a Full Stack Developer",
+      "an IT Administrator",
+      "an ERP Consultant",
+      // "an Accountant",
+    ],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true,
+  });
+}
 
 /*==================== equalize services cards height ====================*/
 function equalizeCardsHeight() {
