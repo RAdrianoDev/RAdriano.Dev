@@ -6,7 +6,6 @@
   box-sizing: border-box;
   text-decoration: none;
   border: none;
-  outline: none;
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
 }
@@ -26,6 +25,47 @@ html {
 body {
   background: var(--bg-color);
   color: var(--text-color);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10001;
+  padding: 1rem 1.6rem;
+  border-radius: 0.8rem;
+  background: var(--main-color);
+  color: var(--bg-color);
+  font-size: 1.6rem;
+  font-weight: 700;
+  transform: translateY(-150%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 0.3rem solid var(--main-color);
+  outline-offset: 0.3rem;
+}
+
+#main-content:focus {
+  outline: none;
 }
 
 section {
@@ -70,9 +110,25 @@ section {
 }
 
 #menu-icon {
-  font-size: 3.6rem;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.4rem;
+  background: transparent;
   color: var(--text-color);
   display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+
+#menu-icon i {
+  font-size: 3.6rem;
+}
+
+#menu-icon:focus-visible {
+  outline: 0.3rem solid var(--main-color);
+  outline-offset: 0.3rem;
 }
 
 .home {
@@ -134,12 +190,13 @@ section {
   }
 }
 
-.home-content h3 {
+.home-eyebrow,
+.home-role {
   font-size: 3.2rem;
   font-weight: 700;
 }
 
-.home-content h3:nth-of-type(2) {
+.home-role {
   margin-bottom: 2rem;
 }
 
@@ -172,7 +229,8 @@ span {
   transition: 0.5s ease;
 }
 
-.social-media a:hover {
+.social-media a:hover,
+.social-media a:focus-visible {
   background: var(--main-color);
   color: var(--second-bg-color);
   box-shadow: 0 0 1rem var(--main-color);
@@ -193,7 +251,8 @@ span {
   text-decoration: none;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus-visible {
   box-shadow: none;
 }
 
@@ -348,6 +407,8 @@ span {
 
 .portfolio-container .portfolio-box {
   position: relative;
+  aspect-ratio: 640 / 426;
+  min-height: 1px;
   border-radius: 2rem;
   box-shadow: 0 0 1rem var(--bg-color);
   overflow: hidden;
@@ -355,12 +416,18 @@ span {
 }
 
 .portfolio-box img {
+  position: absolute;
+  inset: 0;
+  display: block;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: 0.5s ease;
 }
 
-.portfolio-box:hover img {
-  transform: scale(1.1rem);
+.portfolio-box:hover img,
+.portfolio-box:focus-within img {
+  transform: scale(1.1);
 }
 
 .portfolio-box .portfolio-layer {
@@ -380,7 +447,8 @@ span {
   transition: 0.5s ease;
 }
 
-.portfolio-box:hover .portfolio-layer {
+.portfolio-box:hover .portfolio-layer,
+.portfolio-box:focus-within .portfolio-layer {
   transform: translateY(0);
 }
 
@@ -390,22 +458,44 @@ span {
 
 .portfolio-layer p {
   font-size: 1.6rem;
-  margin: 0.3rem 0 1 rem;
+  margin: 0.3rem 0 1rem;
 }
 
 .portfolio-layer a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 5rem;
-  height: 5rem;
+  gap: 0.6rem;
+  min-height: 44px;
+  padding: 0.8rem 1.4rem;
   background: var(--text-color);
-  border-radius: 50%;
+  border-radius: 999px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--second-bg-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.portfolio-layer a {
+.portfolio-layer a i {
   font-size: 2rem;
-  color: var(--second-bg-color);
+}
+
+.portfolio-layer a:hover,
+.portfolio-layer a:focus-visible {
+  background: var(--second-bg-color);
+  color: var(--text-color);
+}
+
+.portfolio-layer a:focus-visible {
+  outline: 0.3rem solid var(--text-color);
+  outline-offset: 0.3rem;
+}
+
+@media (hover: none), (pointer: coarse), (max-width: 768px) {
+  .portfolio-box .portfolio-layer {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 238, 255, 0.9));
+    transform: translateY(0);
+  }
 }
 
 .contact h2 {
@@ -705,7 +795,7 @@ span {
 
 @media (max-width: 768px) {
   #menu-icon {
-    display: block;
+    display: inline-flex;
   }
 
   .navbar {
@@ -732,9 +822,20 @@ span {
 
   .home {
     flex-direction: column;
+    overflow-x: clip;
   }
 
-  .home-content h3 {
+  .home-content,
+  .home-img,
+  .about-content,
+  .about-img {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  .home-eyebrow,
+  .home-role {
     font-size: 2.6rem;
   }
 
@@ -749,6 +850,11 @@ span {
 
   .about {
     flex-direction: column-reverse;
+    overflow-x: clip;
+  }
+
+  .about-content {
+    width: 100%;
   }
 
   .about-img img {
@@ -826,5 +932,20 @@ span {
   .footer p {
     text-align: center;
     margin-top: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
