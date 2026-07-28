@@ -3,6 +3,15 @@ let menuIcon = document.querySelector("#menu-icon");
 let menuIconGlyph = menuIcon.querySelector("i");
 let navbar = document.querySelector(".navbar");
 
+/*==================== current year ====================*/
+const currentYear = String(new Date().getFullYear());
+const currentYearElement = document.querySelector("#current-year");
+
+if (currentYearElement) {
+  currentYearElement.textContent = currentYear;
+  currentYearElement.setAttribute("datetime", currentYear);
+}
+
 function setMenuOpen(isOpen) {
   navbar.classList.toggle("active", isOpen);
   menuIconGlyph.classList.toggle("bx-menu", !isOpen);
